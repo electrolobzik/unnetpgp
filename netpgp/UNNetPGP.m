@@ -571,7 +571,7 @@ static dispatch_queue_t lock_queue;
     
     if (self.password) {
         const char* cstr = self.password.UTF8String;
-        netpgp->passfp = fmemopen((void *)cstr, sizeof(char) * (self.password.length + 1), "r");
+        netpgp->passfp = fmemopen((void *)cstr, sizeof(char) * (self.password.length), "r");
     }
 
     /* 4 MiB for a memory file */
